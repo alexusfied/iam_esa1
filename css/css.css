@@ -1,6 +1,11 @@
 /* variable declarations */
 :root {
     --myapp-color-background: white;
+    --list-item-padding: 12px;
+    --list-item-border-width: 2px;
+    --navbar-height: 50px;
+    --navbar-padding: 10px;
+    --main-list-top-spacer-height: 25px;
 }
 
 html, body {
@@ -34,11 +39,12 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
+    padding: var(--navbar-padding);
     max-width: 100vw;
-    background-color: ghostwhite;
+    height: var(--navbar-height);
+    background-color: white;
     font-size: 2.6rem;
-    box-shadow: darkgray 0 3px;
+    border-bottom: solid 3px darkgray;
 }
 
 .nav-inner-container {
@@ -57,6 +63,57 @@ html, body {
 
 .main-list-container {
     width: 100%;
+    overflow: scroll;
+    height: calc(100% - 2 * var(--navbar-height) - var(--main-list-top-spacer-height) - 2 * var(--navbar-padding));
+}
+
+.main-list-top-spacer {
+    width: 100%;
+    height: var(--main-list-top-spacer-height);
+    background-color: lightgray;
+}
+
+.main-list-item {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: calc(100% - 2 * var(--list-item-padding) - 2 * var(--list-item-border-width));
+    background-color: white;
+    border: var(--list-item-border-width) solid darkgray;
+    border-top: none;
+    padding: var(--list-item-padding);
+}
+
+.main-list-item-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-list-item-inner-container-right {
+    align-items: end;
+    width: 100%;
+}
+
+.main-list-item-img-src,.main-list-item-date {
+    font-size: 1.2rem;
+    color: darkgrey;
+}
+
+.main-list-item-img-title {
+    font-size: 1.8rem;
+}
+
+.available-tags-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.available-tags-count {
+    font-size: 1.2rem;
 }
 
 .footer {
@@ -67,9 +124,11 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     max-width: 100vw;
+    height: var(--navbar-height);
     background-color: ghostwhite;
-    padding: 10px;
+    padding: var(--navbar-padding);
     box-shadow: orangered 0 -3px;
 }
 
