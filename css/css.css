@@ -6,6 +6,7 @@
     --navbar-height: 50px;
     --navbar-padding: 10px;
     --main-list-top-spacer-height: 25px;
+    --main-list-item-default-text-color: darkgray;
 }
 
 html, body {
@@ -100,9 +101,9 @@ main {
     width: 100%;
 }
 
-.main-list-item-img-src,.main-list-item-date {
+.main-list-item-img-src,.main-list-item-date,.available-tags-count {
     font-size: 1.2rem;
-    color: darkgrey;
+    color: var(--main-list-item-default-text-color);
 }
 
 .main-list-item-img-title {
@@ -115,10 +116,6 @@ main {
     align-items: center;
     justify-content: start;
     gap: 5px;
-}
-
-.available-tags-count {
-    font-size: 1.2rem;
 }
 
 .footer {
