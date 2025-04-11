@@ -21,8 +21,7 @@ html, body {
     font-size: 62.5%;
 }
 
-/* block text selection */
-
+/* common */
 * {
     user-select: none;
     -moz-user-select: none;
@@ -36,11 +35,19 @@ h1 {
     font-weight: normal;
 }
 
+.standard-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
 .main-container {
     height: 100vh;
     width: 100vw;
 }
 
+/* navbar top */
 .navbar {
     display: flex;
     flex-direction: row;
@@ -67,12 +74,15 @@ h1 {
     height: 4vh;
 }
 
+/* main view */
+
 main {
     width: 100%;
     overflow: scroll;
     height: calc(100% - 2 * var(--navbar-height) - var(--main-list-top-spacer-height) - 2 * var(--navbar-padding));
 }
 
+/* main items */
 .main-list-top-spacer {
     width: 100%;
     height: var(--main-list-top-spacer-height);
@@ -118,6 +128,7 @@ main {
     gap: 5px;
 }
 
+/* footer */
 .footer {
     position: absolute;
     bottom: 0;
@@ -138,11 +149,4 @@ main {
     width: auto;
     height: 4vh;
     min-height: 30px;
-}
-
-.standard-button {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: none;
 }
