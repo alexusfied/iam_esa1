@@ -30,6 +30,11 @@ html, body {
     margin: 0;
 }
 
+h1 {
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+
 .main-container {
     height: 100vh;
     width: 100vw;
@@ -61,7 +66,7 @@ html, body {
     height: 4vh;
 }
 
-.main-list-container {
+main {
     width: 100%;
     overflow: scroll;
     height: calc(100% - 2 * var(--navbar-height) - var(--main-list-top-spacer-height) - 2 * var(--navbar-padding));
@@ -136,4 +141,11 @@ html, body {
     width: auto;
     height: 4vh;
     min-height: 30px;
+}
+
+.standard-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
 }
