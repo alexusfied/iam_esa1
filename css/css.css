@@ -96,7 +96,6 @@ h1 {
 }
 
 /* main view - list */
-
 main {
     width: 100%;
     overflow: scroll;
@@ -146,6 +145,12 @@ main {
     align-items: center;
     justify-content: start;
     gap: 5px;
+}
+
+.options-icon {
+    background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
+    width: 25px;
+    height: 25px;
 }
 
 /* main items - tile */
