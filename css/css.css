@@ -93,7 +93,6 @@ main {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    width: calc(100% - 2 * var(--list-item-padding) - 2 * var(--list-item-border-width));
     background-color: white;
     border: var(--list-item-border-width) solid darkgray;
     border-top: none;
