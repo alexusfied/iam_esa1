@@ -42,7 +42,7 @@ h1 {
     border: none;
 }
 
-.list-view {
+.list-view, .tile-view {
     height: 100vh;
     width: 100vw;
 }
@@ -130,6 +130,11 @@ main {
     align-items: center;
     justify-content: start;
     gap: 5px;
+}
+
+.tile-view .main-list-item-img-src, .tile-view .main-list-item-date,
+.tile-view .available-tags-container, .tile-view .main-list-item-img-title {
+    display: none;
 }
 
 /* footer */
