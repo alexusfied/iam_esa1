@@ -40,6 +40,11 @@ h1 {
     align-items: center;
     background-color: transparent;
     border: none;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .list-view, .tile-view {
@@ -52,7 +57,7 @@ h1 {
     -webkit-filter: invert(60%);
 }
 
-/* navbar top */
+/* navbar top - list */
 .navbar {
     display: flex;
     flex-direction: row;
@@ -73,10 +78,21 @@ h1 {
     height: 100%;
 }
 
-.nav-icon {
-    width: auto;
-    min-height: 30px;
-    height: 4vh;
+#burger-menu-icon {
+    background-image: url("./img/png/menu_FILL0_wght400_GRAD0_opsz24.png");
+}
+
+#view-type-icon {
+    background-image: url("./img/png/grid_view_FILL0_wght400_GRAD0_opsz24.png");
+}
+
+#add-icon {
+    background-image: url("./img/png/add_FILL0_wght400_GRAD0_opsz24.png");
+}
+
+/* navbar top - tile */
+.tile-view #view-type-icon {
+    background-image: url("./img/png/list_FILL0_wght400_GRAD0_opsz24.png");
 }
 
 /* main view - list */
