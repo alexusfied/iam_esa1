@@ -9,18 +9,6 @@
     --main-list-item-default-text-color: darkgray;
 }
 
-html, body {
-    background-color: var(--myapp-color-background);
-    margin: 0px;
-    font-family: "Avenir Medium", sans-serif;
-    color: black;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
-    font-size: 62.5%;
-}
-
 /* common */
 * {
     user-select: none;
@@ -28,6 +16,18 @@ html, body {
     -webkit-user-select: none;
     padding: 0;
     margin: 0;
+}
+
+html, body {
+    background-color: var(--myapp-color-background);
+    margin: 0;
+    font-family: "Avenir Medium", sans-serif;
+    color: black;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
 }
 
 h1 {
@@ -79,7 +79,7 @@ h1 {
     height: 4vh;
 }
 
-/* main view */
+/* main view - list */
 
 main {
     width: 100%;
@@ -104,38 +104,15 @@ main {
     padding: var(--list-item-padding);
 }
 
-.tile-view .main-list-item {
-    position: relative;
-    display: inline-block;
-    flex-direction: unset;
-    gap: unset;
-    border: unset;
-    padding: 2px;
-}
-
-.tile-view ul {
-    padding: 5px;
-}
-
 .main-list-item-inner-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.tile-view .main-list-item-inner-container {
-    all: unset;
-}
-
 .main-list-item-inner-container-right {
     align-items: end;
     width: 100%;
-}
-
-.tile-view .main-list-item-inner-container-right {
-    position: absolute;
-    top: 95px;
-    left: 95px;
 }
 
 .main-list-item-img-src,.main-list-item-date,.available-tags-count {
@@ -155,6 +132,20 @@ main {
     gap: 5px;
 }
 
+/* main items - tile */
+.tile-view .main-list-item {
+    position: relative;
+    display: inline-block;
+    flex-direction: unset;
+    gap: unset;
+    border: unset;
+    padding: 2px;
+}
+
+.tile-view ul {
+    padding: 5px;
+}
+
 .tile-view .main-list-item-img-src, .tile-view .main-list-item-date,
 .tile-view .available-tags-container, .tile-view .main-list-item-img-title {
     display: none;
@@ -163,6 +154,16 @@ main {
 .tile-view .options-icon {
     filter: invert(90%);
     -webkit-filter: invert(90%);
+}
+
+.tile-view .main-list-item-inner-container {
+    all: unset;
+}
+
+.tile-view .main-list-item-inner-container-right {
+    position: absolute;
+    top: 95px;
+    left: 95px;
 }
 
 /* footer */
