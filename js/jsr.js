@@ -1,9 +1,13 @@
 window.onload = function () {
 
+  const itemsList = document.getElementsByTagName("ul")[0];
+  const refreshIcon = document.getElementById("refresh-icon");
+
   async function fetchListItems() {
     const url = "http://192.168.178.20:8395/data/listitems.json";
 
     try {
+      console.log("Fetching list items...");
       const response = await fetch(url);
 
       if (!response.ok) {
@@ -75,8 +79,6 @@ window.onload = function () {
   }
 
   async function renderItemList() {
-    const itemsList = document.getElementsByTagName("ul")[0];
-
     const listItemData = await fetchListItems();
 
     listItemData.forEach((item) => {
@@ -84,6 +86,14 @@ window.onload = function () {
       itemsList.appendChild(newListItem);
     });
   }
+
+  function refreshItemsList() {
+    itemsList.replaceChildren();
+    renderItemList();
+  }
+
+  // Register event listeners
+  refreshIcon.addEventListener("click", refreshItemsList);
 
   // Main
   renderItemList();

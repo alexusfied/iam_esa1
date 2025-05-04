@@ -6,6 +6,7 @@ window.onload = function() {
   let currentViewStyle = "list-view";
 
   function toggleCurrentViewStyle() {
+    console.log("Switching view style...");
     mainView.style.opacity = "0";
     setTimeout(() => {
       mainContainer.classList.remove(currentViewStyle);
