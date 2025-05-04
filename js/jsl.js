@@ -1,7 +1,6 @@
 const mainContainer = document.getElementById("main-container");
 const mainView = document.querySelector("main");
 const viewStyleButton = document.getElementById("view-type-icon");
-const listItems = document.getElementsByClassName("main-list-item");
 let currentViewStyle = "list-view";
 
 function toggleCurrentViewStyle() {

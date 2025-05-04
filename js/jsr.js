@@ -1,5 +1,6 @@
 const itemsList = document.getElementsByTagName("ul")[0];
 const refreshIcon = document.getElementById("refresh-icon");
+const addIcon = document.getElementById("add-icon");
 
 async function fetchListItems() {
   const url = "http://192.168.178.20:8395/data/listitems.json";
@@ -100,8 +101,23 @@ function refreshItemsList() {
   renderItemList();
 }
 
+function addListItem() {
+  const listObj = {
+    title: "wiesor",
+    owner: "placekitten.com",
+    added: (new Date()).toLocaleDateString(),
+    numOfTags: 3,
+    src: "https://picsum.photos/150/200"
+  };
+
+  const listItem = createListItem(listObj);
+
+  itemsList.appendChild(listItem);
+}
+
 // Register event listeners
 refreshIcon.addEventListener("click", refreshItemsList);
+addIcon.addEventListener("click", addListItem);
 
 // Main
 renderItemList();
