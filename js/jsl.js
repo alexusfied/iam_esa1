@@ -19,22 +19,4 @@ function toggleCurrentViewStyle() {
     mainView.style.opacity = "100";}, 2000);
 }
 
-function handleListItemClick(e, listItem) {
-  const itemTitle = listItem.getElementsByClassName("main-list-item-img-title")[0].textContent;
-  const imgUrl = listItem.getElementsByClassName("main-list-item-img-src")[0].textContent;
-  if (e.target.classList.contains("options-icon")) {
-    alert(`
-       Title: ${itemTitle}
-       URL: ${imgUrl}
-     `);
-  } else {
-    alert(itemTitle);
-  }
-}
-
 viewStyleButton.addEventListener("click", toggleCurrentViewStyle);
-for (let i = 0; i < listItems.length; i++) {
-  listItems.item(i).addEventListener("click", (e) => {
-    handleListItemClick(e, listItems.item(i));
-  });
-}
