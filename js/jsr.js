@@ -74,14 +74,18 @@ function createListItem(listItemObject) {
   return newItem;
 }
 
+function removeListItem(item) {
+  itemsList.removeChild(item);
+}
+
 function handleListItemClick(e, listItem) {
   const itemTitle = listItem.getElementsByClassName("main-list-item-img-title")[0].textContent;
   const imgUrl = listItem.getElementsByClassName("main-list-item-img-src")[0].textContent;
   if (e.target.classList.contains("options-icon")) {
-    alert(`
+    confirm(`
        Title: ${itemTitle}
        URL: ${imgUrl}
-     `);
+     `) ? removeListItem(listItem): null;
   } else {
     alert(itemTitle);
   }
@@ -111,6 +115,7 @@ function addListItem() {
   };
 
   const listItem = createListItem(listObj);
+  listItem.addEventListener("click", (e) => handleListItemClick(e, listItem));
 
   itemsList.appendChild(listItem);
 }
